@@ -1,61 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Timohin's CV</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/a3c0b9fd88.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cv</title>
+  <!--  стили -->
+  <link rel="stylesheet" href="style.css">
+  <!-- favicon -->
+  <link rel="icon" href="assets/favicon.ico">
+  <!-- шрифт -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header class = "header">
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#Contacts" class="nav-link">Contacts</a></li>
+        <li class="nav-item"><a href="#Summary" class="nav-link">Summary</a></li>
+        <li class="nav-item"><a href="#Skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#Code" class="nav-link">Code</a></li>
+        <li class="nav-item"><a href="#Courses" class="nav-link">Courses</a></li>
+        <li class="nav-item"><a href="#Projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="#Education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#English" class="nav-link">English</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <body>
-    <header class="section-header">
-      <div class="section-wrapper">
-        <div class="section-header__photo">
-          <img
-            class="my-photo"
-            src="./img/test_git.jpeg"
-            alt="My Photo"
-          />
+  <main class="main main-container">
+
+    <section class="section section-profile" id="profile">
+        <img src="./assets/img/test_git.jpeg" alt="My Photo" class="section-profile-logo">
+    
+        <div class="section-profile-title"> 
+          <h1 class="section-title">Timokhin Dmitry Alexandrovich</h1>
+          <p>JUNIOR FRONT-END DEVELOPER</p>
+          <p> Location: Russia, Moscow</p>
         </div>
-        <div class="section-header__contacts">
-          <h1>Timokhin Dima Alexandrovich</h1>
-          <p><i class="fas fa-mobile-alt"></i>tel.: +7 (915) XXX-XX-XX</p>
-          <p><i class="far fa-envelope"></i>email: timokhin.dmiitry@gmail.com</p>
-          <p>
-            <i class="fab fa-github"></i>Github:
-            <a href="https://github.com/DimkaTiM" target="_blank"
-              >DimkaTiM</a
-            >
-          </p>
-        </div>
-      </div>
-    </header>
-    <main class="section-main">
-      <div class="section-wrapper">
-        <div class="section-main__skills">
-          <h2>Skills:</h2>
-          <ul class="section-main__skills-list">
-            <li>HTML / CSS / SCSS</li>
-            <li>JavaScript (ES6)</li>
-            Python (NLP, DS, pundas ....)
-            Java, SQL
-            C, C++
-            <li>Frameworks: Angular (in progress)</li>
-            <li>Git / GitHub / Bitbucket / Gitlab</li>
-            <li>Bundlers: Webpack</li>
-            <li>Design program: Figma, Sketch</li>
-            <li>
-                Web development tools: Neovim, VSCode, Notepad++, Sublime Text, Chrome dev.
-            </li>
-            <li>Other: Mac/linux user and some windows.</li>
-          </ul>
-        </div>
-      </div>
-    </main>
-  </body>
+    </section>
+    <section class="section" id="Contacts">
+      <h2 class="section-title">Contacts</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:timokhin.dmiitry@gmail.com" class="nav-link">timokhin.dmiitry@gmail.com</a></li>
+        <li>Discord: Dimka_T#1818</li>
+        <li>Telegram: <a href="https://t.me/DimkaTim" class="nav-link">@DimkaTim</a></li>
+      </ul>
+    </section>
+    <section class="section" id="Summary">
+      <h2 class="section-title">Summary</h2>
+      <p>For the last 4 years I have been learning and working as a programmer. I study Applied Informatics. I worked as a beginner data scientist, business analyst, front-end developer and now I am working on DWH, but I still have a desire to go deeper into the front</p>
+    </section>
+    <section class="section" id="Skills">
+      <h2 class="section-title">Skills</h2>
+        <ul class="section-main__skills-list">
+          <li>HTML / CSS / SCSS </li>
+          <li>JavaScript (ES6)</li>
+          <li>Python (NLP, DS, pundas ....)</li>
+          <li>Java, SQL</li>
+          <li>C, C++</li>
+          <li>Frameworks: Angular (in progress)</li>
+          <li>Git/ GitHub / Bitbucket / Gitlab</li>
+          <li>Bundlers: Webpack</li>
+          <li>Design program: Figma, Sketch</li>
+          <li>Web development tools: Neovim, VSCode, Notepad++, Sublime Text, Chrome dev.</li>
+          <li>Other: Mac/linux user and some windows.</li>
+      </ul>
+    </section>
+    <section class="section" id="Code">
+      <h2 class="section-title">Code</h2>
+      Codewars.
+        <a href="https://www.codewars.com/kata/5552101f47fc5178b1000050" class="nav-link">Playing with digits</a>
+      
+        <pre class="pre">
+          <code>
+          function digPow(n, p){
+            
+            for(var i = 0; i &lt; 100; i++){
+              var t = (n+"").split("")
+              var sum = 0;
+              var e = p;
+              for(var k = 0; k &lt; t.length; k++){
+                sum = sum + (+t[k])**e
+                e++;
+              }
+              for(var k = 0; k &lt; 99999; k++){
+                if((n * k) == sum){
+                  console.log(n, sum,  k)
+                  return k
+                }
+              }
+              
+            }
+              console.log(n, sum,  k)
+              return -1
+          }
+        </code>
+      </pre>
+    </section>
+    <section class="section" id="Courses">
+      <h2 class="section-title">Courses</h2>
+      
+      <ul class="courses-list">
+        <li> Stepik: <a href="https://stepik.org/cert/185691" class="nav-link">Basics of statistics</a> </li>
+        <li> DataCamp: <a href="https://www.datacamp.com" class="nav-link">Python, ML, NLP, pundas</a> </li>
+        <li> Kaggle: <a href="https://www.kaggle.com/c/titanic" class="nav-link">Data cases for learning python ML</a> </li>
+      </ul>
+    </section>
+    <section class="section" id="Projects">
+      <h2 class="section-title">Projects</h2>
+      <a href="https://github.com/DimkaTiM/Python_anaconda_ML" class="nav-link">GitHub</a>
+      <p>Developed by NLP to compose closely related words in vector representation using DeepiPavlov technology in Anaconda jupyter</p>
+    </section>
+    <section class="section" id="Education">
+      <h2 class="section-title">Education</h2>
+      <ul class="Education-list">
+        <li> 2018-2022
+          - Bauman Moscow State Technical University, Applied Informatics
+          (in progress) </li>
+        <li> May 2021 – Until now
+           - <a href="https://data-frame.ru" class="nav-link">DataFrame</a>	Software developer. - Developer JS, Java</li>
+        <li> January 2020 – February 2021**
+          - TalentPoweredTeam (<a href="https://talentpowered.team/" class="nav-link ">TPT</a>) 	Startup Freelance Exchange. - Business analyst </li>
+        <li> August 2018 - May 2019
+          - <a href="http://rbtechnologies.ru" class="nav-link ">RB Technologies</a>	Software developer. - Junior Data Scientist </li>
+    </ul>
+    </section>
+    <section class="section" id="English">
+      <h2 class="section-title">Languages</h2>
+      <ul class="Education-list">
+        <li> Russian - native speaker</li>
+        <li> English - B1 (Pre-Intermediate English)</li>
+      </ul>
+    </section>
+  </main> 
+  
+  <footer class = "footer">
+    <div class="footer-container">
+      <div>© 2022 </div>
+      <a href="https://github.com/DimkaTiM" class="github nav-link">DimkaTiM</a>
+      <a href="https://rs.school/js/" class="rss"></a>
+    </div>
+  </footer>
+</body>
 </html>
